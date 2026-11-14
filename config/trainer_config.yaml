@@ -1,0 +1,23 @@
+CONFIG:
+  CONFIG_FILE_PATH:
+    model: '/mnt/f/PatternRecognition/codes/config/models.yaml'
+    dataset: 
+      BTCV: /mnt/f/PatternRecognition/codes/config/datasets/BTCV.yaml
+      BUSI: /mnt/f/PatternRecognition/codes/config/datasets/BUSI.yaml
+      FIVES: /mnt/f/PatternRecognition/codes/config/datasets/FIVES.yaml
+      ISIC2018: /mnt/f/PatternRecognition/codes/config/datasets/ISIC2018.yaml
+      Kvasir: /mnt/f/PatternRecognition/codes/config/datasets/Kvasir.yaml
+    optimizer: /mnt/f/PatternRecognition/codes/config/optimizer.yaml
+    augmentation: 
+      train: /mnt/f/PatternRecognition/codes/config/datasets/aug_train.yaml
+      test_val: /mnt/f/PatternRecognition/codes/config/datasets/aug_test_val.yaml
+  MODEL: unet
+  DATASET: BTCV
+  OPTIMIZER: adamw
+  LR_SCHEDULER: step
+  SAVE_DIR: '/mnt/f/PatternRecognition/codes/runs'
+  DEVICE: cuda
+  EPOCHS: 300
+  EVAL_EPOCH: 1
+  W_DICE: 0.5
+  W_CE: 1.0
